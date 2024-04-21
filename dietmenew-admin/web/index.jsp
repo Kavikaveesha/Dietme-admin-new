@@ -37,9 +37,23 @@
                     <%@include file="WEB-INF/pages/users/usersRow.jsp" %>
                     <% } %>
 
-                    <% if (request.getParameter("page") != null && request.getParameter("page").equals("Default Meals")) { %>
+                    <% if (request.getParameter("page") != null && request.getParameter("page").equals("defaultMeals")) { %>
                     <%@include file="WEB-INF/pages/default_meals/DefaultMeals.jsp" %>
                     <% }%>
+                    
+                    <% if (request.getParameter("page") != null && request.getParameter("page").equals("customMeals")) { %>
+                    <%@include file="WEB-INF/pages/custom_meals/customMeals.jsp" %>
+                    <% }%>
+                    
+                    <% if (request.getParameter("page") != null && request.getParameter("page").equals("mealContains")) { %>
+                    <%@include file="WEB-INF/pages/meal_contains/mealsContains.jsp" %>
+                    <% }%>
+                    
+                    <% if (request.getParameter("page") != null && request.getParameter("page").equals("orders")) { %>
+                    <%@include file="WEB-INF/pages/orders/orders.jsp" %>
+                    <% }%>
+                    
+                    
                 </div>
 
                 <div class="container-fluid" style="width: 90%;">
