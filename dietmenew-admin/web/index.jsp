@@ -27,18 +27,18 @@
                 <div class="main-content">
 
                     <% if (request.getParameter("page") != null && request.getParameter("page").equals("dashboard")) { %>
-                    <%@include file="" %>
+                    <%@include file="WEB-INF/pages/home/homeCategoryRow.jsp" %>
                     <% } %>
                 </div>
 
                 <div class="container-fluid" style="width: 90%;">
 
                     <% if (request.getParameter("page") != null && request.getParameter("page").equals("users")) { %>
-                    <%@include file="common/widgets/usersRow.jsp" %>
+                    <%@include file="WEB-INF/pages/users/usersRow.jsp" %>
                     <% } %>
 
                     <% if (request.getParameter("page") != null && request.getParameter("page").equals("Default Meals")) { %>
-                    <%@include file="common/widgets/DefaultMeals.jsp" %>
+                    <%@include file="WEB-INF/pages/default_meals/DefaultMeals.jsp" %>
                     <% }%>
                 </div>
 
