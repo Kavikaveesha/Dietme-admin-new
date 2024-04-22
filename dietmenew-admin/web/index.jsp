@@ -1,16 +1,16 @@
 <html lang="en">
     <head>
-        <!-- Required meta tags -->
+        
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
         <title>cms dashboard
         </title>
-        <!-- Bootstrap CSS -->
+        
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <!-- Custom CSS -->
+        
         <link rel="stylesheet" href="common/styles/custom.css" />
-        <!-- SLIDER REVOLUTION 4.x CSS SETTINGS -->
+        
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,14 +24,17 @@
             <div id="content">
                 <%@include file="common/widgets/topnavbar.jsp" %>
 
-                <div class="main-content">
+            <div class="main-content">
 
+                <div class="container-fluid" style="width: 90%;">
+                    
+                    <% if (request.getParameter("page") == null ) { %>
+                    <%@include file="WEB-INF/pages/home/homeCategoryRow.jsp" %>
+                    <% } %>
+                    
                     <% if (request.getParameter("page") != null && request.getParameter("page").equals("dashboard")) { %>
                     <%@include file="WEB-INF/pages/home/homeCategoryRow.jsp" %>
                     <% } %>
-                </div>
-
-                <div class="container-fluid" style="width: 90%;">
 
                     <% if (request.getParameter("page") != null && request.getParameter("page").equals("users")) { %>
                     <%@include file="WEB-INF/pages/users/usersRow.jsp" %>
@@ -53,11 +56,11 @@
                     <%@include file="WEB-INF/pages/orders/orders.jsp" %>
                     <% }%>
                     
-                    
                 </div>
+            </div>
 
                 <div class="container-fluid" style="width: 90%;">
-                    <br><br>
+                <br><br>
                 </div>
             </div>
         </div>

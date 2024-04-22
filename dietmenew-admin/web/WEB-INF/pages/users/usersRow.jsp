@@ -136,9 +136,6 @@
                 </table>
             </div>
         </div>
-    <script>
-        // Hide the users content initially
-        document.getElementById("usersContent").style.display = "";
-    </script>
+    
     </body>
 </html>
